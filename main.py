@@ -31,12 +31,12 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =   requests.get(f"http://kuki-api.tk/api/reply/meredith/james/female/2/language=en/message=hi").json()
+  Kuki =   requests.get(f"http://kuki-api.tk/api/reply/meredith/james/female/2/language=en/message={msg}").json()
 
   james = f"{meredith['reply']}"
       
   await client.send_chat_action(message.chat.id, "typing")
-  await message.reply_text(james)
+  await message.reply_text(moezilla)
 
 
 messageprivate = '''
