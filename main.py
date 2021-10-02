@@ -31,7 +31,7 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =   requests.get(f"http://kuki-api.tk/api/meredith/james/female/2/language=en/message=hi").json()
+  Kuki =   requests.get(f"http://kuki-api.tk/api/meredith/james/message=hi").json()
 
   moezilla = f"{Kuki['reply']}"
       
