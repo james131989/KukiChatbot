@@ -21,8 +21,7 @@ kuki = Client(
 )
 
 @kuki.on_message(
-    filters.regex("Olivia|olivia|OliviaBenson|oliviabenson|benson")
-    & filters.text
+    filters.text
     & filters.reply
     & ~filters.bot
     & ~filters.edited,
