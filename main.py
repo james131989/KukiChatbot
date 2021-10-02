@@ -31,7 +31,7 @@ async def kukiai(client: Client, message: Message):
   msg = message.text
   chat_id = message.chat.id
 
-  Kuki =   requests.get(f"https://kuki-api.tk/api/botname/owner/message={msg}").json()
+  Kuki =   requests.get(f"http://kuki-api.tk/api/reply/Meredith/James/female/2/language=en/message=hi").json()
 
   moezilla = f"{Kuki['reply']}"
       
@@ -40,11 +40,11 @@ async def kukiai(client: Client, message: Message):
 
 
 messageprivate = '''
-Hi, I'm Kuki Chat Bot
+Hi, I'm Meredith
 '''
 
 messagegroup = '''
-Hi, I'm Kuki Chat Bot
+Hi, I'm Meredith
 '''
 
 
@@ -59,7 +59,7 @@ async def start(_, message):
         await message.reply_text(messagegroup)
         return
     else:
-        buttons = [[InlineKeyboardButton("Github", url="https://github.com/MoeZilla/KukiChatBot"),
+        buttons = [[InlineKeyboardButton("Channel", url="https://t.me/taylife"),
                     ]]
         await message.reply_text(messageprivate, reply_markup=InlineKeyboardMarkup(buttons))
 
